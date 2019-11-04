@@ -76,7 +76,7 @@
       "indent": 0,
       "text": "1. Introduction",
       "section_title": true,
-      "ja": "1.はじめに"
+      "ja": "1. はじめに"
     },
     {
       "indent": 3,
@@ -102,7 +102,7 @@
       "indent": 0,
       "text": "1.1. Acronyms and Terms",
       "section_title": true,
-      "ja": "1.1。略語と用語"
+      "ja": "1.1. 略語と用語"
     },
     {
       "indent": 3,
@@ -260,7 +260,7 @@
       "indent": 0,
       "text": "3.1. Centralized versus Distributed Deployment",
       "section_title": true,
-      "ja": "3.1。分散型の展開対一元化"
+      "ja": "3.1. 分散型の展開対一元化"
     },
     {
       "indent": 3,
@@ -276,7 +276,7 @@
       "indent": 0,
       "text": "3.2. CGN and Traditional IPv4 Service Coexistence",
       "section_title": true,
-      "ja": "3.2。 CGNと従来のIPv4サービスの共存"
+      "ja": "3.2.  CGNと従来のIPv4サービスの共存"
     },
     {
       "indent": 3,
@@ -297,7 +297,7 @@
       "indent": 0,
       "text": "3.3. CGN Bypass",
       "section_title": true,
-      "ja": "3.3。 NPAバイパス"
+      "ja": "3.3.  NPAバイパス"
     },
     {
       "indent": 3,
@@ -313,7 +313,7 @@
       "indent": 0,
       "text": "3.4. Routing Plane Separation",
       "section_title": true,
-      "ja": "3.4。ルーティングプレーンの分離"
+      "ja": "3.4. ルーティングプレーンの分離"
     },
     {
       "indent": 3,
@@ -329,7 +329,7 @@
       "indent": 0,
       "text": "3.5. Flexible Deployment Options",
       "section_title": true,
-      "ja": "3.5。柔軟な導入オプション"
+      "ja": "3.5. 柔軟な導入オプション"
     },
     {
       "indent": 3,
@@ -350,7 +350,7 @@
       "indent": 0,
       "text": "3.6. IPv4 Overlap Space",
       "section_title": true,
-      "ja": "3.6。 IPv4のオーバーラップスペース"
+      "ja": "3.6.  IPv4のオーバーラップスペース"
     },
     {
       "indent": 3,
@@ -361,7 +361,7 @@
       "indent": 0,
       "text": "3.7. Transactional Logging for CGN Systems",
       "section_title": true,
-      "ja": "3.7。 CGNシステムのトランザクションログ"
+      "ja": "3.7.  CGNシステムのトランザクションログ"
     },
     {
       "indent": 3,
@@ -382,7 +382,7 @@
       "indent": 0,
       "text": "3.8. Base CGN Requirements",
       "section_title": true,
-      "ja": "3.8。基本CGNの要件"
+      "ja": "3.8. 基本CGNの要件"
     },
     {
       "indent": 3,
@@ -434,7 +434,7 @@
       "indent": 0,
       "text": "4.1. Service Separation",
       "section_title": true,
-      "ja": "4.1。サービスの分離"
+      "ja": "4.1. サービスの分離"
     },
     {
       "indent": 3,
@@ -445,7 +445,7 @@
       "indent": 0,
       "text": "4.2. Internal Service Delivery",
       "section_title": true,
-      "ja": "4.2。内部サービスデリバリ"
+      "ja": "4.2. 内部サービスデリバリ"
     },
     {
       "indent": 3,
@@ -496,7 +496,7 @@
       "indent": 0,
       "text": "4.2.1. Dual-Stack Operation",
       "section_title": true,
-      "ja": "4.2.1。デュアルスタック操作"
+      "ja": "4.2.1. デュアルスタック操作"
     },
     {
       "indent": 3,
@@ -532,7 +532,7 @@
       "indent": 0,
       "text": "4.3. Deployment Flexibility",
       "section_title": true,
-      "ja": "4.3。展開の柔軟性"
+      "ja": "4.3. 展開の柔軟性"
     },
     {
       "indent": 3,
@@ -552,7 +552,7 @@
     {
       "indent": 0,
       "text": "4.4. Comparison of BGP/MPLS IP VPN Option versus Other CGN Attachment Options",
-      "ja": "4.4。その他CGN添付オプション対BGP / MPLS IP VPNオプションの比較"
+      "ja": "4.4. その他CGN添付オプション対BGP / MPLS IP VPNオプションの比較"
     },
     {
       "indent": 3,
@@ -578,7 +578,7 @@
       "indent": 0,
       "text": "4.4.1. Policy-Based Routing",
       "section_title": true,
-      "ja": "4.4.1。ポリシーベースルーティング"
+      "ja": "4.4.1. ポリシーベースルーティング"
     },
     {
       "indent": 3,
@@ -594,7 +594,7 @@
       "indent": 0,
       "text": "4.4.2. Traffic Engineering",
       "section_title": true,
-      "ja": "4.4.2。トラフィックエンジニアリング"
+      "ja": "4.4.2. トラフィックエンジニアリング"
     },
     {
       "indent": 3,
@@ -605,7 +605,7 @@
       "indent": 0,
       "text": "4.4.3. Multiple Routing Topologies",
       "section_title": true,
-      "ja": "4.4.3。複数のルーティングトポロジ"
+      "ja": "4.4.3. 複数のルーティングトポロジ"
     },
     {
       "indent": 3,
@@ -616,7 +616,7 @@
       "indent": 0,
       "text": "4.5. Multicast Considerations",
       "section_title": true,
-      "ja": "4.5。マルチキャストの注意事項"
+      "ja": "4.5. マルチキャストの注意事項"
     },
     {
       "indent": 3,
@@ -638,7 +638,7 @@
       "indent": 0,
       "text": "5.1. Basic Integration and Requirements Support",
       "section_title": true,
-      "ja": "5.1。基本的な統合と要件のサポート"
+      "ja": "5.1. 基本的な統合と要件のサポート"
     },
     {
       "indent": 3,
@@ -689,7 +689,7 @@
       "indent": 0,
       "text": "5.2. Performance",
       "section_title": true,
-      "ja": "5.2。演奏"
+      "ja": "5.2. 演奏"
     },
     {
       "indent": 3,
@@ -749,7 +749,7 @@
       "indent": 0,
       "text": "9.1. Normative Reference",
       "section_title": true,
-      "ja": "9.1。引用規格"
+      "ja": "9.1. 引用規格"
     },
     {
       "indent": 3,
@@ -760,7 +760,7 @@
       "indent": 0,
       "text": "9.2. Informative References",
       "section_title": true,
-      "ja": "9.2。参考文献"
+      "ja": "9.2. 参考文献"
     },
     {
       "indent": 3,
