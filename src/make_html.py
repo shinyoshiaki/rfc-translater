@@ -4,9 +4,10 @@ import json
 from mako.template import Template
 from mako.lookup import TemplateLookup
 
+
 def make_html(rfc_number):
-    input_dir = 'data/%04d' % (rfc_number//1000%10*1000)
-    input_file = '%s/rfc%d-trans.json' % (input_dir, rfc_number)
+    input_dir = 'data/%04d' % (rfc_number//1000 % 10*1000)
+    input_file = '%s/rfc%d.json' % (input_dir, rfc_number)
     output_dir = 'html'
     output_file = '%s/rfc%d.html' % (output_dir, rfc_number)
 
