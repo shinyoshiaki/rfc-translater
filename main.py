@@ -6,6 +6,7 @@ from src.make_html import make_html
 from src.make_index import make_index
 from src.fetch_index import diff_remote_and_local_index
 
+
 def main(rfc_number, trans_mode=None):
     print('RFC %d:' % rfc_number)
 
@@ -25,42 +26,44 @@ def main(rfc_number, trans_mode=None):
         return
 
     res = trans_rfc(rfc_number, mode=trans_mode)
-    if res is False: return False
+    if res is False:
+        return False
     make_html(rfc_number)
+
 
 def continuous_main(begin=None, end=None, trans_mode=None):
     numbers = list(diff_remote_and_local_index())
-    if begin and end: # 開始と終了区間の設定
+    if begin and end:  # 開始と終了区間の設定
         numbers = [x for x in numbers if begin <= x <= end]
 
     for rfc_number in numbers:
         res = main(rfc_number, trans_mode=trans_mode)
-        if res is False: break
+        if res is False:
+            break
+
 
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--rfc', type=int, help='RFC number')
+    parser.add_argument('--rfc', type=str, help='RFC number')
     parser.add_argument('--fetch', action='store_true', help='only fetch RFC')
     parser.add_argument('--trans', action='store_true', help='only translate')
     parser.add_argument('--make', action='store_true', help='only make HTML')
     parser.add_argument('--begin', type=int, help='begin rfc number')
     parser.add_argument('--end', type=int, help='end rfc number')
     parser.add_argument('--trans-mode', dest='trans_mode',
-        choices=['selenium', 'googletrans'], default='selenium')
+                        choices=['selenium', 'googletrans'], default='selenium')
     parser.add_argument('--make-index', dest='make_index',
-        action='store_true', help='make index.html')
+                        action='store_true', help='make index.html')
     parser.add_argument('--transtest', action='store_true')
     parser.add_argument('--force', '-f', action='store_true')
     args = parser.parse_args()
 
     if args.make_index:
         make_index()
-
     elif args.transtest:
         from src.trans_rfc import trans_test
         trans_test()
-
     elif args.fetch and args.begin and args.end:
         numbers = list(diff_remote_and_local_index())
         numbers = [x for x in numbers if args.begin <= x <= args.end]
@@ -75,9 +78,8 @@ if __name__ == '__main__':
             make_html(rfc_number)
     elif args.make and args.rfc:
         make_html(args.rfc)
-
     elif args.rfc:
         main(args.rfc, trans_mode=args.trans_mode)
     else:
         continuous_main(begin=args.begin, end=args.end,
-            trans_mode=args.trans_mode)
+                        trans_mode=args.trans_mode)

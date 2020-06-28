@@ -6,10 +6,16 @@ from mako.lookup import TemplateLookup
 
 
 def make_html(rfc_number):
-    input_dir = 'data/%04d' % (rfc_number//1000 % 10*1000)
-    input_file = '%s/rfc%d.json' % (input_dir, rfc_number)
-    output_dir = 'html'
-    output_file = '%s/rfc%d.html' % (output_dir, rfc_number)
+    if len(rfc_number) > 5:
+        input_dir = 'data/draft'
+        input_file = '%s/%s.json' % (input_dir, rfc_number.split("/")[-1])
+        output_dir = 'html'
+        output_file = '%s/%s.html' % (output_dir, rfc_number.split("/")[-1])
+    else:
+        input_dir = 'data/%04d' % (rfc_number//1000 % 10*1000)
+        input_file = '%s/rfc%d.json' % (input_dir, rfc_number)
+        output_dir = 'html'
+        output_file = '%s/rfc%d.html' % (output_dir, rfc_number)
 
     if not os.path.isfile(input_file):
         print("make_html: Not found:", input_file)
