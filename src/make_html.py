@@ -12,6 +12,7 @@ def make_html(rfc_number):
         output_dir = 'html'
         output_file = '%s/%s.html' % (output_dir, rfc_number.split("/")[-1])
     else:
+        rfc_number = int(rfc_number)
         input_dir = 'data/%04d' % (rfc_number//1000 % 10*1000)
         input_file = '%s/rfc%d.json' % (input_dir, rfc_number)
         output_dir = 'html'

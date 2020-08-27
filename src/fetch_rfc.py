@@ -60,15 +60,15 @@ class Paragraph:
                 # src
                 or len(re.compile(r'[;{}]$', re.MULTILINE).findall(text)) >= 2
                 # xml
-                    or len(re.compile(r'^</', re.MULTILINE).findall(text)) >= 2
-                    or re.search(r'[/|\\] +[/|\\]', text)  # figure
-                    or re.match(r'^Email: ', text)  # Authors' Addresses
-                    # hexdump
+            or len(re.compile(r'^</', re.MULTILINE).findall(text)) >= 2
+            or re.search(r'[/|\\] +[/|\\]', text)  # figure
+            or re.match(r'^Email: ', text)  # Authors' Addresses
+            # hexdump
                     or re.search(r'(?:[0-9A-F]{2} ){8} (?:[0-9A-F]{2} ){7}[0-9A-F]{2}', text)
                     # hexdump
                 or re.search(r'000 {2,}(?:[0-9a-f]{2} ){16} ', text)
                 or re.search(r'[0-9a-zA-Z]{32,}$', text)  # hex
-                ):
+            ):
             return True
 
         # 数式やプログラムを検出する
@@ -79,7 +79,7 @@ class Paragraph:
         threshold = 3 + (lines_num - 1) * 1
         if (len(re.findall(r'[~+*/=!#<>{})^@:;]|[^ ]\(| -', text)) >= threshold
                 and (not re.search(r'[.,:]\)?$', text))  # 文末が「.,:」ではない
-                ):
+            ):
             return True
 
         return False
@@ -136,6 +136,7 @@ def fetch_rfc(number, force=False):
         output_dir = 'data/draft'
         output_file = '%s/%s.json' % (output_dir, url.split('/')[-1])
     else:
+        number = int(number)
         url = 'https://tools.ietf.org/html/rfc%d' % number
         output_dir = 'data/%04d' % (number//1000 % 10*1000)
         output_file = '%s/rfc%d.json' % (output_dir, number)
